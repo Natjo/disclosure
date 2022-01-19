@@ -27,6 +27,7 @@
 	const open = () => {
 		btn.setAttribute('aria-expanded', true);
 		document.addEventListener('keyup', keyup);
+		document.addEventListener('blur', close);
 		window.addEventListener(clicktouch, clickOut);
 		if (typeof params.onopen === 'function') params.onopen(el);
 	};
@@ -34,6 +35,7 @@
 		if(params.autoclose !== false){
 			btn.setAttribute('aria-expanded', false);
 			document.removeEventListener('keyup', keyup);
+			document.removeEventListener('blur', close);
 			window.removeEventListener(clicktouch, clickOut);
 			if (typeof params.onclose === 'function') params.onclose(el);
 		}

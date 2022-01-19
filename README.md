@@ -3,7 +3,7 @@
 
 ![version](https://img.shields.io/github/manifest-json/v/Natjo/disclosure)
 
-Accesible disclore component to hide/show panel.
+Accesible disclosure component to hide/show panel.
 
 btn must have the id of panel in aria-control
 
@@ -31,17 +31,33 @@ btn must have the id of panel in aria-control
 	</form>
 </div>
 ```
+
 ### javascript
 ```javascript
 import disclosure from './modules/disclosure/disclosure';
 disclosure({
-	el: dropdown,
+	el: document.querySelector('.disclosure'),
 	btn: '.summary',
 	onopen(){
 	
 	}
 })
 ```
+
+### CSS
+```css
+.disclosure{
+	.summary{
+		&[aria-expanded="true"] + .panel {
+			display: block;
+		}
+		&[aria-expanded="false"] + .panel  {
+			display: none;
+		}
+	}
+}
+```
+
 
 ## Demo
 [See codepen demo](https://codepen.io/natjo/pen/oNGzJGK?editors=0011)
