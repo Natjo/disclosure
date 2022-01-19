@@ -20,15 +20,13 @@ btn must have the id of panel in aria-control
 
 ### html
 ```html
-<div class="dropdown">
-	<button class="summary" 
-	aria-expanded="false" 
-	aria-controls="mypanel" 
-	aria-label="See specification">Specification</button>
-	<form class="panel" id="mypanel">
-	<h2>Specifications</h2>
-	<input type="checkbox"><label>Contrast</label>
-	</form>
+<div class="disclosure">
+	<button class="summary" aria-expanded="false" aria-controls="disclosure" aria-label="Lorem">I'm disclosure</button>
+	<div class="panel" id="mypanel">
+		<h2>Hello</h2>	
+		<p>lorem ipsum</p>
+		<a href="/">Link 1</a>
+	</div>
 </div>
 ```
 
