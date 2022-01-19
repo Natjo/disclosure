@@ -14,7 +14,7 @@ btn must have the id of panel in aria-control
 | btn | selector | |
 | onopen | function | fired on open |
 | onclose | function | fired on close |
-| autoclose | function | et if panel stay open on focuse out |
+| autoclose | function | if false panel stay open on focuse out |
 
 ## Usage
 
@@ -55,7 +55,6 @@ disclosure({
 	}
 }
 ```
-
 
 ## Demo
 [See codepen demo](https://codepen.io/natjo/pen/oNGzJGK?editors=0011)
